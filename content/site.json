@@ -1,0 +1,23 @@
+{
+  "whatsapp": "8801869922662",
+  "email": "salehin4234@gmail.com",
+  "facebook": "https://www.facebook.com/YOUR_PAGE",
+  "instagram": "https://www.instagram.com/YOUR_HANDLE",
+  "stats": [
+    {
+      "number": 1000,
+      "suffix": "+",
+      "label": "Completed Projects"
+    },
+    {
+      "number": 3,
+      "suffix": "+",
+      "label": "Years of Experience"
+    },
+    {
+      "number": 10,
+      "suffix": "+",
+      "label": "Ad Campaigns Managed"
+    }
+  ]
+}

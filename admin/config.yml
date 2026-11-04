@@ -1,0 +1,40 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: uploads
+public_folder: /uploads
+
+collections:
+  - name: work
+    label: Selected Work
+    file: content/work.json
+    format: json
+    fields:
+      - name: items
+        label: Projects
+        widget: list
+        summary: "{{fields.category}}: {{fields.title}}"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Category, name: category, widget: select, options: [Graphics Design, Video Editing, Voice Over, Meta Marketing]}
+          - {label: Image (optional), name: image, widget: image, required: false}
+          - {label: Link (Drive/YouTube, optional), name: link, widget: string, required: false}
+
+  - name: site
+    label: Contact & Stats
+    file: content/site.json
+    format: json
+    fields:
+      - {label: WhatsApp number (with 880, no +), name: whatsapp, widget: string}
+      - {label: Email, name: email, widget: string}
+      - {label: Facebook page URL, name: facebook, widget: string}
+      - {label: Instagram URL, name: instagram, widget: string}
+      - name: stats
+        label: Stats
+        widget: list
+        summary: "{{fields.number}}{{fields.suffix}} {{fields.label}}"
+        fields:
+          - {label: Number, name: number, widget: number, value_type: int}
+          - {label: Suffix, name: suffix, widget: string, default: "+"}
+          - {label: Label, name: label, widget: string}
